@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="585.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MainController">
+   <children>
+      <VBox>
+         <children>
+            <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" pannable="true" style="-fx-background-color: FBFBFB;" vbarPolicy="NEVER">
+               <content>
+                  <GridPane fx:id="gridPane">
+                  </GridPane>
+               </content>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+            </ScrollPane>
+         </children>
+      </VBox>
+      <VBox layoutX="1040.0" prefHeight="400.0" prefWidth="199.0">
+         <children>
+            <RadioButton fx:id="placerChoiceCell" mnemonicParsing="false" selected="true" text="Клітина">
+               <toggleGroup>
+                  <ToggleGroup fx:id="placerChoice" />
+               </toggleGroup>
+               <font>
+                  <Font name="Helvetica" size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="placerModeCellAuto" mnemonicParsing="false" selected="true" text="Авто">
+               <font>
+                  <Font name="Helvetica" size="13.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="placerModeCell" />
+               </toggleGroup>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="10.0" />
+               </VBox.margin>
+            </RadioButton>
+            <Button fx:id="cellAutoGenerate" mnemonicParsing="false" style="-fx-background-color: #0099ff #0099ff;" text="Генерувати" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="40.0" top="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Helvetica" size="13.0" />
+               </font>
+            </Button>
+            <RadioButton fx:id="placerModeCellManual" mnemonicParsing="false" text="Ручне управління" toggleGroup="$placerModeCell">
+               <font>
+                  <Font name="Helvetica" size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="20.0" right="20.0" top="5.0" />
+               </VBox.margin>
+            </RadioButton>
+            <Slider fx:id="cellDifficulty" max="0.3" min="0.01" showTickLabels="true">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Slider>
+            <RadioButton fx:id="placerChoiceFood" mnemonicParsing="false" text="Їжа" toggleGroup="$placerChoice">
+               <font>
+                  <Font name="Helvetica" size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </RadioButton>
+            <RadioButton fx:id="placerModeFoodAuto" mnemonicParsing="false" selected="true" text="Авто">
+               <font>
+                  <Font name="Helvetica" size="13.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="placerModeFood" />
+               </toggleGroup>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="20.0" top="5.0" />
+               </VBox.margin>
+            </RadioButton>
+            <Button fx:id="foodAutoGenerate" mnemonicParsing="false" style="-fx-background-color: #0099ff #0099ff;" text="Генерувати" textFill="WHITE">
+               <font>
+                  <Font name="Helvetica" size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="40.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <RadioButton fx:id="placerModeFoodManual" mnemonicParsing="false" text="Ручне управління" toggleGroup="$placerModeFood">
+               <font>
+                  <Font name="Helvetica" size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="20.0" />
+               </VBox.margin>
+            </RadioButton>
+            <Slider fx:id="foodDifficulty" max="0.3" min="0.01" showTickLabels="true">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Slider>
+            <RadioButton fx:id="placerChoicePoison" mnemonicParsing="false" text="Отрута" toggleGroup="$placerChoice">
+               <font>
+                  <Font name="Helvetica" size="13.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="placerModePoisonAuto" mnemonicParsing="false" selected="true" text="Авто">
+               <font>
+                  <Font name="Helvetica" size="13.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="placerModePoison" />
+               </toggleGroup>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="20.0" top="10.0" />
+               </VBox.margin>
+            </RadioButton>
+            <Button fx:id="poisonAutoGenerate" mnemonicParsing="false" style="-fx-background-color: #0099ff #0099ff;" text="Генерувати" textFill="WHITE">
+               <font>
+                  <Font name="Helvetica" size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="40.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <RadioButton fx:id="placerModePoisonManual" mnemonicParsing="false" text="Ручне управління" toggleGroup="$placerModePoison">
+               <font>
+                  <Font name="Helvetica" size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="20.0" />
+               </VBox.margin>
+            </RadioButton>
+            <Slider fx:id="poisonDifficulty" max="0.3" min="0.01" showTickLabels="true">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Slider>
+            <RadioButton fx:id="placerChoiceWall" mnemonicParsing="false" text="Перешкода" toggleGroup="$placerChoice">
+               <font>
+                  <Font name="Helvetica" size="13.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="placerModeWallAuto" mnemonicParsing="false" selected="true" text="Авто">
+               <font>
+                  <Font name="Helvetica" size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="20.0" top="10.0" />
+               </VBox.margin>
+               <toggleGroup>
+                  <ToggleGroup fx:id="placerModeWall" />
+               </toggleGroup>
+            </RadioButton>
+            <Button fx:id="wallAutoGenerate" mnemonicParsing="false" style="-fx-background-color: #0099ff #0099ff;" text="Генерувати" textFill="WHITE">
+               <font>
+                  <Font name="Helvetica" size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="40.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+            <RadioButton fx:id="placerModeWallManual" mnemonicParsing="false" text="Ручне управління" toggleGroup="$placerModeWall">
+               <font>
+                  <Font name="Helvetica" size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="20.0" />
+               </VBox.margin>
+            </RadioButton>
+            <Slider fx:id="wallDifficulty" max="0.3" min="0.01" showTickLabels="true" />
+            <Label text="Розмір клітин">
+               <font>
+                  <Font name="Helvetica" size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Slider fx:id="cellSizeSlider" max="50.0" min="10.0" value="30.0" />
+            <Label text="Швидкість">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Helvetica" size="13.0" />
+               </font>
+            </Label>
+            <Slider fx:id="speedSlider" max="997.0" value="800.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="startProcess" mnemonicParsing="false" style="-fx-background-color: #0099ff #0099ff;" text="Старт" textFill="WHITE">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="stopProcess" mnemonicParsing="false" style="-fx-background-color: #0099ff #0099ff;" text="Стоп" textFill="WHITE">
+                     <font>
+                        <Font name="Helvetica" size="13.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="98.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+      </VBox>
+      <ScrollPane fx:id="statScroll" layoutX="924.0" layoutY="20.0" prefHeight="745.0" prefWidth="108.0">
+         <content>
+            <Label fx:id="statLabel" text="Епохи:">
+               <font>
+                  <Font name="Helvetica" size="13.0" />
+               </font>
+            </Label>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
